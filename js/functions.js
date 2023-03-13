@@ -168,5 +168,4 @@ function sayHello() {
 }
  sayHello();
 
-var globalVar = "Look, Im Global";
-
+var global =
