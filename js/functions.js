@@ -103,10 +103,16 @@
      *
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
+
+    var originalPrice = 100;
+    var discountPercent = .2; 
+    applyDiscount(originalPrice, discountPercent)
+    applyDiscount(45.99, 0.12)
     function applyDiscount(price, discount) {
         var discountAmount = discount * price
-            console.log(discountAmount)
-        return price - discountAmount
+            console.log(discountAmount) {
+            return price - discountAmount
+        }
 
     }
 
