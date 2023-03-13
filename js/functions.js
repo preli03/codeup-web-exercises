@@ -8,9 +8,9 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-// function sayHello(name) {
-//     return ('Hello, ' +name)
-// }
+ function sayHello(name) {
+     return ('Hello, ' +name)
+ }
 
 /**
  * TODO:
@@ -19,21 +19,20 @@
  *
  * console.log 'helloMessage' to check your work
  */
-// const helloMessage = sayHello('Pat')
-// console.log(helloMessage)
+    const helloMessage = sayHello('Pat')
+    console.log(helloMessage)
 
-/**
- * TODO:
- * Store your name as a string in a variable named 'myName', and pass that
- * variable to the 'sayHello' function. You should see the same output in the
- * console.
- */
-// const myName = 'Pat';
-// console.log(sayHello(myName))
+
+ //TODO:
+ //Store your name as a string in a variable named 'myName', and pass that
+ //variable to the 'sayHello' function. You should see the same output in the console.
+
+    const myName = 'Pat';
+    console.log(sayHello(myName))
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+    var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -52,11 +51,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-// function isTwo(num) {
-//     console.log(num)
-//     return num === 2
-// }
-// console.log(isTwo(random))
+    function isTwo(num) {
+     console.log(num)
+   return num === 2
+}
+    console.log(isTwo(random))
 
 /**
  * TODO:
@@ -69,20 +68,26 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(percentage, totalBill) {
+    function calculateTip(percentage, totalBill) {
     return percentage * totalBill
+}
+    console.log(calculateTip(0.20, 20)) //returns 4
+    console.log(calculateTip(0.25, 25.50)) // returns 6.375
+    console.log(calculateTip(0.15, 33.42)) // returns 5.013
+
+
     /**
      * TODO:
      * Use prompt and alert in combination with your calculateTip function to
      * prompt the user for the bill total and a percentage they would like to tip,
      * then display the dollar amount they should tip
      */
-// var tipPercentage = +prompt('What is the tip percentage? EX: .25 for 25%')
-// var billTotal = +prompt('What is the total bill?')
-// var calcTip = calculateTip(tipPercentage, billTotal)
-// alert('The calculated tip is $' +calcTip)
-// console.log(typeof calcTip)
-// alert(`The calculated tip is $${calcTip}`)
+    var tipPercentage = +prompt('What is the tip percentage? EX: .25 for 25%');
+    var billTotal = +prompt('What is the total bill?');
+    var calcTip = calculateTip(tipPercentage, billTotal);
+    alert('The calculated tip is $' +calcTip);
+    console.log(typeof calcTip);
+    alert(`The calculated tip is $${calcTip}`);
 
     /**
      * TODO:
@@ -98,74 +103,17 @@ function calculateTip(percentage, totalBill) {
      *
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
-    function applyDiscount(price,discount) {
-        var discountAmount = disctoun * price
-            // console.log(disountAmount)
-            -
+    function applyDiscount(price, discount) {
+        var discountAmount = discount * price
+            console.log(discountAmount)
         return price - discountAmount
 
     }
 
+    var originalPrice = 100
+    var discountPercent = .2;
+    console.log(applyDiscount(originalPrice, discountPercent))
+    console.log(applyDiscount(45.99,0.12))
+)
 
 
-    //EXAMPLES
-    var multiply = function(x,y){return x*y;}; console.log(multiply(2,3));
-
-    function increment(X) {
-    return x + 1 ;
-    }
-
-    var four =
-}
-
-//anonymous function
-// var increment + functions // (no name)(n) {
-return x + 1;
-}
-
-var increment(x:1);
-
-
-var numbers = [2,4,6,8];
-numbers.forEach(functinon(num :number){
-    console.log(num +=5);
-    {
-
-
-    }
-})
-
-functnion sayHello(userName){
-    console.log(userName);
-    alert("welcome," + userName);
-
-}
-var nameInput = prompt( "what\'s your name?");
-sayHello(nameInput);
-
-//write a function that accepts the name and converts to lowerCase
-//write a function
-//accept 1 peremeter
-//convert param -> loverCase
-//return the result (after lowerCased)
-//execute the function
-functino toLowerCase(param){
-    var lowerCase = param.toLowerCase();
-    return lowerCase;
-
-}
-
-console.log(converttolowercaseparam: "welcome to codeup!!!"));
-convertTolower(param: "and OVER");
-convertTolower( param: "heLLo WoRlD")
-
-//GLOBAL SCOPE
-
-function sayHello() {
-    //glbal var is accessible her since the sayHello function scope is a subscope of the global scope
-    alert(localVar);
-    alert(globalVar);
-}
- sayHello();
-
-var global =
