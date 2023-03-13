@@ -1,9 +1,8 @@
 "use strict";
-/**
 
-console.log('Hello from external Javascript');
+console.log('Hello from external Javascript')
 
-alert("Boo Welcome to my Website!");
+alert('Welcome to my Website!');
 
 var favColor = prompt( 'What is your favorite color?');
 
@@ -11,8 +10,6 @@ console.log(favColor);
 
 alert( 'Great, ' + favColor + ' is my favorite color also!');
 
-//.....
- */
 
 
 
@@ -109,9 +106,9 @@ var theNumber = Number(prompt("Pick a number")); if (!Number.isNaN(theNumber)) {
   alert( "Your number is the square root of")
 
 
-  console.log("Hey. Why didn't you give me a number?");
+  console.log("Hey, Why didn't you give me a number?");
 
-  alert("Hey, why didnt you give me a number?")
+  alert("Hey, Why didnt you give me a number?")
 
 }
 
