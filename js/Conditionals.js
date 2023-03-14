@@ -1,4 +1,57 @@
+console.log("conditionals:");
+
+//if statements:
+
+//if / else/ switch- js keywords
+
+if (condition) { // user, developers decide on the condition
+    // this is where our code lives
+    // weonly want this block of code to run IF and / ONLY is the condition is met to be true
+    //
+    //
+    // }
+
+    alert("before the statement!!")
+
+
+ // var points = 40;
+    //if (10 > 4)
+        // local scope ->
+        //alert("10 is greater than 4");
+   // alert("you win a prize");
+// } else {
+  //  alert("you win nothing...")
+}
+   // alert( 'after the if statement')
+
+
+//weather: 70+ , bring sunnies
+//weather: 50-70, bring sweater
+//weather: 50-, stay home
+
+var weather = 60;
+var bringsweaterAndjacket = 32
+    console.log('bringsweaterAndjacket');
+
+
+if ( 32 < 50 )
+    //local scope
+    alert('5 < 50');
+alert('bringsweaterAndjacket')
+} else if ( 32 < 50) {
+    console.log('bringsweaterAndjacket');
+}
+
+
+
+
+
+
+
 "use strict";
+
+
+//NOTES CONDITIONALS
 
 //conditionals exercise//
 
