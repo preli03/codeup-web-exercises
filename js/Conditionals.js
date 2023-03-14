@@ -6,7 +6,7 @@ console.log("conditionals:");
 
 if (condition) { // user, developers decide on the condition
     // this is where our code lives
-    // weonly want this block of code to run IF and / ONLY is the condition is met to be true
+    // we only want this block of code to run IF and / ONLY is the condition is met to be true
     //
     //
     // }
@@ -42,7 +42,7 @@ alert('bringsweaterAndjacket')
     console.log('bringsweaterAndjacket');
 }
 
-
+//var message = (success) ? "Operation was successful." : "oops something went wrong"
 
 
 
