@@ -1,17 +1,27 @@
 console.log("conditionals:");
 
+var pizzaPreference = prompt("What kind of pizza do you like?");
+
+switch(pizzaPreference) {
+    case "pineapple and hot sauce":
+        alert("What a coincidence, that's my favorite!");
+        break;
+    case "cheese":
+        alert("Just plain cheese? Okay...");
+        break;
+    default:
+        alert(pizzaPreference + " isn't my favorite, but let's order some!");
+        break;
+}
+
+//write a function that accepts the weather and returns 'bring sunnies if its 'sunny' and
+    //returns 'bring sunnies if it's sunny and
+    //returns 'bring sweater' if its 'chilly'
+
 //if statements:
 
 //if / else/ switch- js keywords
 
-if (condition) { // user, developers decide on the condition
-    // this is where our code lives
-    // we only want this block of code to run IF and / ONLY is the condition is met to be true
-    //
-    //
-    // }
-
-    alert("before the statement!!")
 
 
  // var points = 40;
@@ -21,7 +31,6 @@ if (condition) { // user, developers decide on the condition
    // alert("you win a prize");
 // } else {
   //  alert("you win nothing...")
-}
    // alert( 'after the if statement')
 
 
@@ -29,18 +38,16 @@ if (condition) { // user, developers decide on the condition
 //weather: 50-70, bring sweater
 //weather: 50-, stay home
 
-var weather = 60;
-var bringsweaterAndjacket = 32
-    console.log('bringsweaterAndjacket');
-
-
-if ( 32 < 50 )
+//if ( 32 < 50 )
     //local scope
-    alert('5 < 50');
-alert('bringsweaterAndjacket')
-} else if ( 32 < 50) {
-    console.log('bringsweaterAndjacket');
-}
+    //alert('5 < 50');
+//alert('bringsweaterAndjacket'); {
+  //  else
+//} ( 32 < 50) {
+  //  console.log('bringsweaterAndjacket');
+//}
+
+
 
 //var message = (success) ? "Operation was successful." : "oops something went wrong"
 
@@ -48,7 +55,6 @@ alert('bringsweaterAndjacket')
 
 
 
-"use strict";
 
 
 //NOTES CONDITIONALS
@@ -75,17 +81,15 @@ alert('bringsweaterAndjacket')
  * console.logging the function's return value
  */
 
-// function analyzeColor(color) {
-//     if(color.toLowerCase() === 'red') {
-//         return color + ' is the color of roses'
-//     } else if (color.toLowerCase() === 'blue') {
-//         return color + ' is the color of the sky'
-//     } else {
-//         return 'I don\'t know anything about ' + color
-//     }
-// }
-
-// console.log(analyzeColor('Yellow'))
+ function analyzeColor(color) {
+   if(color.toLowerCase() === 'red') {
+     return color + ' is the color of roses'
+   } else if (color.toLowerCase() === 'blue') {
+      return color + ' is the color of the sky'
+     } else {
+          return 'I don\'t know anything about ' + color
+  }
+    console.log(analyzeColor('Yellow'))
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -161,7 +165,6 @@ function calculateTotal(num, total) {
         case 5: return total -= total * 1
 
     }
-}
 // console.log(calculateTotal(1, 100));
 // console.log(calculateTotal(0, 100));
 // console.log(calculateTotal(4, 100));
@@ -211,7 +214,7 @@ var isEven = function(num) {
     } else {
         alert('The number ' +num+ ' is odd!')
     }
-}
+
 //Adds 100 to number and alerts user
 var plusHundred = function(num) {
     var added = num + 100
@@ -224,18 +227,16 @@ var isPositive = function(num) {
     } else {
         alert('The number ' +num+ ' is negative')
     }
-}
-
+/**
 //Ask user if they want to enter a number and save boolean based on response
-var confirmNumber = confirm('Would you like to enter a number?')
+//var confirmNumber = confirm('Would you like to enter a number?')
 // console.log(confirmNumber)
 //If they click ok then trigger a prompt
-if (confirmNumber) {
-    var numberInput = +prompt('Please enter a number')
+//if (confirmNumber) {
+   // var numberInput = +prompt('Please enter a number')
     // use 3 separate alerts to tell the user
-    isEven(numberInput)
-    plusHundred(numberInput)
-    isPositive(numberInput)
-} else {
-    alert('Please refresh the page to enter a number')
-}
+    //isEven(numberInput)
+    //plusHundred(numberInput)
+    //isPositive(numberInput)
+//} else {
+    //alert('Please refresh the page to enter a number')
