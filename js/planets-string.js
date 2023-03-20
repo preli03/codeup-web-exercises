@@ -3,7 +3,6 @@
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
     var planetsArray = planetsString.split("|");
-    console.log(planetsString);
 
     /**
      * TODO:
@@ -23,7 +22,7 @@
      * BONUS:
      * Create another string that would display your planets in an undordered
      * list. You will need an opening AND closing <ul> tags around the entire
-     * string, and <li> tags around each planet.
+     * string, and <li> tags around each planet...>>>IDKIDKIDKIDKIDKIDK....
      */
     var listPlanets = planetsString.split("|");
     var brlistPlanets = "<ul>" + "<li>" + listPlanets.join("</li><li>") + "</li>" + "</ul>";

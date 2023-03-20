@@ -190,6 +190,62 @@ indexOf-specify the specific location of a
 indexof / lastIndexof - first and last location in array
 slice-provide two index points, beginning and ending, cutting up array,         takes certain indexes that we have provided
 
+var listPlanets = planetsString.split("|");
+            var brlistPlanets = "<ul>" + "<li>" + listPlanets.join("</li><li>") + "</li>" + "</ul>";
+            console.log(listPlanets);
+            console.log(brlistPlanets);
+EXAMPLE
+// var namesString = "Joe,Bob,Sally";
+        // console.log(namesString);
+        // // Joe,Bob,Sally
+
+        // var namesAsArray = namesString.split(",");
+        // console.log(namesAsArray);
+        // // ["Joe", "Bob", "Sally"]
+
+        // namesAsArray.sort();
+        // console.log(namesAsArray);
+
+        // var arrayNames = namesAsArray.join(",");
+        // console.log(arrayNames);
+        // // Joe,Bob,Sally
+
+        //JOINING
+        let namesArray = ['Joe', 'Bob', 'Sally'] ,
+        console.log(namesArray);
+       this will log the console with the list ^^^
+       var namesString = arrArray.join(',');
+       console.l(namesString);
+       this will log the console wit the list---you can manipulate this into splitting,joining,,reversing,adding, subtracting, index, turn into strings.
 
 
+        //OBJECTS
+        HOW TO  CREATE AND ACCESSING OBJECTS INSIDE
+        HOW TO CREATE-
+            new object();
+            we want to store it in a var
+            var icecream = new object();
+            console.log(icecream); = output >> {}
+            key: values for each of these objects nested after variable
+            you can use DOT to navigate to ur object to see whats nested               inside / console.log(bike.brand)
+            var waterbottle = {
+            steel: Yeti
+            sport: football
+            Oz: 20
+
+console.log(state)
+state.name='Texas'
+console.log(state)
+state.size='300000'
+
+
+
+            }
+
+
+
+
+
+
+        ACCESSING-
 

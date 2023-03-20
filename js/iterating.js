@@ -63,22 +63,27 @@ names.forEach(function(element, index, array) {
  *  > first([1, 2, 3, 4, 5]) // returns 1
  *  > second([1, 2, 3, 4, 5]) // returns 2
  *  > last([1, 2, 3, 4, 5]) // return 5
- */function first(arr){
-     return arr [0];
 
+ */
+function first([arr]) {
+        var anyNumber = [arr]
+        return arr[1];
+    }
+    console.log(first([arr]));
+
+       function second([arr]){
+        return arr[2]
+    }
+    console.log(second([arr]));
+function last([arr]){
+    return arr[5]
 }
-{
-    console.log.(first (number));
+console.log(last([arr]));
 
-    function second(arr){
-        return arr[1]
-    }
-    console.log(second(numbers));
-
-    function last(arr) {
+    function anyNumber(arr) {
         return arr[arr.length - 1]
-    }
+    function second(arr) {
+        return arr[arr.length - 2]
     function last(arr) {
         return arr[arr.length - 5]
-    )
-});
+    }}}

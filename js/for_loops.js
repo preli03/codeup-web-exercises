@@ -74,7 +74,7 @@ for (var i = 1; i < 10; i++){
     console.log('all items will be placed inside the car '  +car)
 }
 
-//#5 Create a for loo that uses console.log. to create the output shown below
+//#5 Create a for loop that uses console.log. to create the output shown below
 for ( i = 100; i >= 5; i-=5){
     console.log(''+ i);
 }
@@ -105,16 +105,16 @@ var number = prompt('enter number between 1-50');
     break
 
 
-//increment-a / decrement /b--) console.log(b--); console.log(a++)
-    if ( {
-        if (i == num){
+//TODO-increment-a / decrement /b--) console.log(b--); console.log(a++)
+   // if ( {
+     //   if (i = num){
 
-        }
-        console.log(number)
-            console.log('skip number:   '+ num)
-console.log('odd number input: ' i--);
+     //   },
+      //  console.log(i),
+      ///  console.log('skip number:  '+ i ),
+      //  console.log('odd number input: ' + i--);
 
-    }
+   // }
     }
 
 
