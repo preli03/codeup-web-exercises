@@ -131,4 +131,65 @@ var global =
 
 
 
+//LOOPS
+//ARRAYS
+    //var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+    //console.log(shapes.length);) //4
+
+    //var cars = ['ferrari', 'lambo', 'ford', 'chevy'];
+    //console.log(cars.)
+
+//ADDING OBJECTS TO ARRAYS/MANIPULATING ARRAYS
+
+var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday'];
+var daysoftheWeek =["Monday, tuesday,wednesday"];
+
+daysoftheWeek.unshift(items:'Sunday);
+cosnsole.log(days of the week);
+
+daysoftheWeek.push('Fiday',' Saturday);
+console.log.(daysoftheWeek);
+
+
+var todoList = ['Take out the trash', 'Clean the car', 'Pay the bills'];
+
+var todoList = ['Take out the trash', 'Clean the car', 'Pay the bills'];
+
+console.log('My todo list:');
+console.log(todoList);
+// ['Take out the trash', 'Clean the car', 'Pay the bills']
+
+console.log('Completing the last item: ' + todoList[todoList.length - 1]);
+
+// let's remove the last item
+var removedItem = todoList.pop();
+
+// log what we did
+console.log('Task complete: ' + removedItem);
+
+console.log(todoList);
+// ['Take out the trash', 'Clean the car']
+
+console.log('Completing the first item: ' + todoList[0]);
+
+// let's remove the first item
+var doneItem = todoList.shift();
+
+// log what we did
+console.log('Task complete: ' + doneItem);
+
+console.log(todoList);
+// ['Clean the car']
+
+;)
+
+LOCATING ARRAYS; [Monday,Tuesday,Weds,Thurs,Fri,Sat,Sun]
+daysoftheWeek.indexOf("Monday")
+console.log(daysoftheWeek);
+indexOf-specify the specific location of a
+indexof / lastIndexof - first and last location in array
+slice-provide two index points, beginning and ending, cutting up array,         takes certain indexes that we have provided
+
+
+
 
