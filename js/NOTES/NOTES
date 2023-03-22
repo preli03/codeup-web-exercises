@@ -218,7 +218,7 @@ EXAMPLE
        console.l(namesString);
        this will log the console wit the list---you can manipulate this into splitting,joining,,reversing,adding, subtracting, index, turn into strings.
 
-
+USE ALL REQUIREMENTS THE QUESTION IS ASKING!!!
         //OBJECTS
         HOW TO  CREATE AND ACCESSING OBJECTS INSIDE
         HOW TO CREATE-
@@ -241,6 +241,17 @@ state.size='300000'
 
 
             }
+
+            --MATH OBJECT--
+            GET A RANDOM NUMBER --
+            // Returns a random integer between min and max.
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+
+
+
 
 
 
