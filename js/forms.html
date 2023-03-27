@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
+</head><h1>Register with US!</h1>
 <body>
+<form method="POST" action="https://request-inspector.glitch.me/">
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+    <input type="submit">
+
+    <h3>Tell us about yourself</h3>
+    <textarea name="comment" placeholder="Tell us about Yourself!"></textarea>
+    <input type="submit">
+    <br>
+
+
+    <h3>How did you hear about us?</h3>
+    <textarea name="comment" placeholder="How did you hear about us?"></textarea><br>
+    BillBoards <input type="radio" name="quiz_question_1" value="a"><br>
+    Radio Ads <input type="radio" name="quiz_question_2" value="b"><br>
+    Internet Ads <input type="radio" name="quiz_question_3" value="c"><br>
+    LinkedIn <input type="radio" name="quiz_question_4" value="d"><br>
+    Other <input type="radio" name="quiz_question_5" value="e">
+    <br>
+
+    <h3> What web Browser are you using?</h3>
+    <select name="coffee_preference">
+        <option value="light">Internet Explorer</option>
+        <option value="dark">AOL</option>
+        <option value="espresso">FireFox</option>
+    </select>
+
+
+    <input type="submit">
+
+    <br>
+    <input name="newsletter_signup" value="true" type="checkbox" unchecked>Sign Up For The Email Newsletter
+
+</form>
 
 </body>
 </html>
