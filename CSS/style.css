@@ -7,7 +7,7 @@ body {
     margin-right: auto;
     width: 400px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "American Typewriter";
 }
 
 
@@ -53,6 +53,6 @@ a:active {
 }
 
 /*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.*/
-img {
-    width: 200px;
+.image {
+
 }
