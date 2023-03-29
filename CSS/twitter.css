@@ -7,6 +7,7 @@
 }
 * {
     box-sizing: border-box;
+
 }
 body, html {
     background-color: var(--main-bg);
@@ -22,9 +23,11 @@ header {
     min-height: 300px;
     padding-top: 275px;
 }
-a {
+
+{
     color: var(--link-color);
 }
+
 .top-nav {
     background: var(--light-bg);
     width: 100%;
@@ -32,10 +35,13 @@ a {
     z-index: 1000;
     margin: 5px
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
+    display:flex;
     margin: 0;
+    justify-content: space-evenly;
 }
 
 .nav-item {
