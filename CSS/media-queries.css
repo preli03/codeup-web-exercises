@@ -1,0 +1,8 @@
+/* screen sizes between 960px and 1200px */
+@media screen and (min-width:px) and (max-width:1200px) {
+    /* ... */
+    nav {
+        background: darkolivegreen;
+    }
+}
+

@@ -3,10 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media screen and (min-width:375px) and (max-width:1200px){
+
+
+body{
+
+}
+
+    }
 
 nav {
-    background: #c0022e;
+    background: #7a757a;
     display: flex;
+    flex: auto;
 
 }
 
@@ -61,9 +70,37 @@ li {
     margin-right: 1em;
 
 }
+.btn-primary {
+    display: flex;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    padding: .2em 0;
+}
+
+    footer {
+    display: flex;
+    justify-content: center;
+        margin-top: 15%;
+    padding: 0;
+}
 
 svg {
-    width: 12px;
+    width: 20px;
 }
+
+.social-media-links {
+    display: flex;
+
+}
+
+
+
+/* screen sizes between 960px and 1200px */
+
+}
+
+
+
 
 
