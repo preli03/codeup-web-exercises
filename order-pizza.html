@@ -12,33 +12,41 @@
 
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand{-sm|-md|-lg|-xl|-xxl}">
+    <div class="container-fluid ">
         <a class="navbar-brand" href="#">Pizza,Pizza!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li>
+                    <form class="d-flex  ">
+                        <input class="form-control me-2" style='height: 36px' type="search" placeholder="Zip Code"
+                               aria-label="Search">
+                        <button type="button" class="btn btn-outline-primary text-nowrap">Search
+                            stores near you!
+                        </button>
 
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Order Online</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
-            </li>
-            <li>
-                <input class="form-control me-2" type="search" placeholder="Zipcode" aria-label="Zipcode"></li>
-            <li>
-                <button class="btn btn-outline-primary text-nowrap">Search stores near you!</button>
-            </li>
+                    </form>
+                </li>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill"
-                 viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+            </ul>
+            <svg class='me-2' style='width: 14px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
-            <span class="navbar-text">Sign up!</span>
-
-
-        </ul>
-</nav>
-
+            <span class="navbar-text">
+                Sign up!
+            </span>
+        </div>
+    </div>
 </nav>
 
 <div>
@@ -75,50 +83,85 @@
                 class="btn btn-primary">
             <span class="badge rounded-pill bg-secondary">3</span> Toppings
 </ul>
-            <div class="tab .bg-secondary.bg-gradient" style="width: 100rem">
-            <div class="card" style="width: 100rem">
-            <div class="card-header .bg-secondary.bg-gradient">
-                Hand Tossed
+<div class="tab-content" id="myTabContent">
+    <!--Size panel-->
+    <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
+        <div class="card">
+            <div class="card-header text-white bg-primary">
+                Choose Size and Crust
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+            <!--MAIN CARD-->
+            <div class="card m-3">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <div class="card-body container-sm-1">
+                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                </div>
+                <ul style='border-radius: 0' class="list-group">
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pizzaSize"
+                                   id="pizzaSize1" checked>
+                            <label class="form-check-label" for="pizzaSize1">
+                                Small (10")
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pizzaSize"
+                                   id="pizzaSize2">
+                            <label class="form-check-label" for="pizzaSize2">
+                                Medium (12")
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-    <div class="input-group-text">
-    <input type="radio" aria-label="Radio button for following                                  text input">Small (12')
-        </div>
-        <div class="input-group-text">
-            <input type="radio" aria-label="Radio button for following                                  text input">Medium (12')
+
+
+            <div class="card m-3">
+                <div class="card-header">
+                    Crispy Thin
+                </div>
+                <div class="card-body container-sm-1">
+                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio</p>
+                </div>
+
+                <ul style='border-radius: 0' class="list-group">
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pizzaSize"
+                                   id="thinSize1">
+                            <label class="form-check-label" for="thinSize1">
+                                Medium (12")
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pizzaSize"
+                                   id="thinSize2">
+                            <label class="form-check-label" for="thinSize2">
+                                Large (14")
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-end">
+
+                <button href="#" class="btn btn-primary">Next Step ></button>
+            </div>
         </div>
     </div>
-
-
-</div>
-<h5 class="card-title">Crispy Thin</h5>
-<p class="card-text">Think enough for optimum crispy to crunch ratio.</p>
-<div
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-       aria-label=".form-control-sm example">
-<div class="input-group-prepend">
-    <div class="input-group-text">
-        <input type="radio" aria-label="medium">Medium (12")
-
-    </div>
-</div>
 </div>
 
-<div class="input-group">
-    <div class="input-group-prepend">
-        <div class="input-group-text">
-            <input type="radio" aria-label="large">Large (14")
-        </div>
-    </div>
-</div>
-</div>
-</form>
 
-</div>
-</div>
-</div>
+<!--&lt;!&ndash;Toggle2&ndash;&gt;
+
 <div class="card" style="width: 100%;">
     <div class="choose">Choose Cheese and Sauce</div>
     <form>
@@ -209,13 +252,9 @@
                     <label class="form-check-label" for="defaultCheck1">Jalapeño Peppers
                     </label>
 
-                    <footer>
-                        <button> <a href="" class="next-step">Next Step</a></button>
-                        <!--use flex end to push this button to the right side-->
-                        <!--<button href="" class="next-step">Next Step ></button><button href="" class="next-step">< Previous</button> both next step and previous live here-->
-                    </footer>
+
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                            crossorigin="anonymous"></script>
+                            crossorigin="anonymous"></script>-->
 </body>                 <!-- Your custom JS goes here -->
 </html>

@@ -1,6 +1,6 @@
 
 .jumbotron{
-    background-image: url("images/deep-dish.jpg");
+    background-image: url("/images/deep-dish.jpg");
     height: 346px;
     background-size: cover
 }
