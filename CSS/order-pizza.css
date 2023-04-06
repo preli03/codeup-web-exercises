@@ -4,3 +4,33 @@
     height: 346px;
     background-size: cover
 }
+label {
+    margin: 0;
+}
+
+.star-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.star-check {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -o-appearance: none !important;
+    -ms-appearance: none !important;
+    appearance: none !important;
+    width: 24px;
+    height: 24px;
+    background-image: url('https://www.worthschools.net/userfiles/197/my%20files/4-stars.jpg?id=29736');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    cursor: pointer;
+    outline: 0;
+}
+
+.star-check:checked, .star-check:checked~input {
+    background-position: left 0;
+}
