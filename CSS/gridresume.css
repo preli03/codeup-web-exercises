@@ -1,8 +1,17 @@
 
 
-@media screen and (min-width:px) and (max-width:1200px) {
+@media screen and (min-width:540px) and (max-width:1200px) {
     /* ... */
-    nav {
-        background: darkolivegreen;
+
+
+    .container {
+        border: 4px solid lightblue;
+        height: 400px;
+        width: 75%;
+        margin: 25px 30px;
+
     }
+
+
+
 }
