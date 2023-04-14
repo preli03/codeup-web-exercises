@@ -50,30 +50,26 @@
         // TODO: Uncomment the next line and get all list items
         // var listItems = ;
         var listItems = document.getElementsByTagName("li") ;
-        console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
+        for(var i = 0; i < listItems.length; i++) {
+            if(i % 2 != 0) {
+                listItems[i].style.color = 'grey';
+            }
+        }
         // TODO: Set text color of li with dbid = 1 to blue
-        document.getElementById("btn3").addEventListener("click", function(){
-            for(var i = 1; i < listItems.length; i=i+2){
-                listItems [i].style.color = "grey";
+        for(var i = 0; i < listItems.length; i++) {
+            if(listItems[i].getAttribute('data-dbid') == 1) {
+                listItems[i].style.color = 'blue'
             }
-        });
-        document.getElementById("btn4").addEventListener("click", function(){
-            for(var x = 0; x < listItems.length; x++) {
-                if (listItems[x].getAttribute("data-dbid") ===1){
-                    listItems[x].style.color = "blue";
-                }
-            }
-        });
+        }
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = ;
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        console.log(subParagraphs)
 
     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        document.getElementById("btn5").addEventListener("click", function(){
-            mainHeader.innerText = "Mission Accomplished";});
+        subParagraphs[0].innerHTML = 'Mission Accomplished!';
+
 
 
 
