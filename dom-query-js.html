@@ -1,97 +1,87 @@
-<!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/CSS/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!--change your link for bootstrap-->
 </head>
 <body>
 
 <h1 id="main-header">Hello World!</h1>
-<ul>
+<button id="btn-main" class="btn btn-secondary m-3 mt-2">Change Main Header</button>
+<ul><!--listed items-->
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id="btn-list" class="btn btn-secondary m-3 mt-2">Change Color of List Items</button>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="btn-sub-header" class="btn btn-secondary m-3 mt-2">Change Color of Sub-Header</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
+    @@ -27,7 +28,7 @@
+<h2 id="sub-header">Hello Again.</h2>
+pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
 </p>
-<div>
-    <button id="btn1">Main-header text</button>
-    <button id="btn2">Sub-header color</button>
-    <button id="btn3">List items color</button>
-    <button id="btn4">1st list item color</button>
-    <button id="btn5">p element text</button>
-</div>
-<hr>
-<div class="form-check form-switch">
-    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-    <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode off/on</label>
-</div>
+<button id="btn-sub-para" class="btn btn-secondary m-3 mt-2">Change Sub-Paragraph</button>
+
 <script>
-    (function() {
+    (function () {
         "use strict";
-
-<!--grab the element-->
-            // TODO: Uncomment next line and get the main header element by id
-            var mainHeader = document.getElementById('main-header');
-
-        <!--main header-->
+        // TODO: Uncomment next line and get the main header element by id
+        var mainHeader = document.getElementById('main-header');
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = 'Javascript is Cool';
-
-
-<!--Get the subheader-->
+        var btnMain = document.getElementById("btn-main");
+        btnMain.addEventListener('click', function () {
+            mainHeader.innerHTML = "Javascript is Cool";
+        })
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
         var subHeader = document.getElementById('sub-header');
-        console.log(subHeader)
+/*
         // TODO: Set the text color of subHeader to blue
+*/
+        var btnSubHeader = document.getElementById('btn-sub-header')
+        btnSubHeader.addEventListener('click', function () {
             subHeader.style.color = 'blue';
+        })
+        /* // TODO: Uncomment the next line and get all list items*/
+        var listItems = document.getElementsByTagName('li');
 
-<!--Get the list items elemnt-->
-        // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
-        var listItems = document.getElementsByTagName("li") ;
-
-        // TODO: Set text color on every other list item to grey
-        for(var i = 0; i < listItems.length; i++) {
-            if(i % 2 != 0) {
-                listItems[i].style.color = 'grey';
+        /* // TODO: Set text color on every other list item to grey*/
+        function changeToGrey() {
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 !== 0) {
+                    listItems[i].style.color = 'grey';
+                }
             }
         }
-        // TODO: Set text color of li with dbid = 1 to blue
-        for(var i = 0; i < listItems.length; i++) {
-            if(listItems[i].getAttribute('data-dbid') == 1) {
-                listItems[i].style.color = 'blue'
+
+        /* // TODO: Set text color of li with dbid = 1 to blue*/
+        function changeBlue() {
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute('data-dbid') == 1) {
+                    listItems[i].style.color = 'blue'
+                }
             }
         }
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-
-    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = 'Mission Accomplished!';
-
-
-
-
-
-
+        <!--TODO: Change the text in the first sub paragraph to "Mission Accomplished!"-->
+        var btnSubPara = document.getElementById('btn-sub-para');
+        btnSubPara.addEventListener('click', function () {
+            subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        })
+        //     changing list items through button
+        var btnList = document.getElementById('btn-list');
+        btnList.addEventListener('click', function () {
+            changeBlue();
+            changeToGrey();
+        })
     })();
-
-
-
-
 </script>
 </body>
 </html>
