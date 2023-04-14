@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+
 </head>
 <body>
 
@@ -29,16 +30,16 @@
     (function() {
         "use strict";
 
-
+<!--grab the element-->
             // TODO: Uncomment next line and get the main header element by id
             var mainHeader = document.getElementById('main-header');
 
-
+        <!--main header-->
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = 'Javascript is Cool';
 
 
-
+<!--Get the subheader-->
         // TODO: Uncomment the next line and get the sub header element by id
         // var subHeader = ;
         var subHeader = document.getElementById('sub-header');
@@ -46,7 +47,7 @@
         // TODO: Set the text color of subHeader to blue
             subHeader.style.color = 'blue';
 
-
+<!--Get the list items elemnt-->
         // TODO: Uncomment the next line and get all list items
         // var listItems = ;
         var listItems = document.getElementsByTagName("li") ;
@@ -76,6 +77,19 @@
 
 
     })();
+
+    <!--SELECTED BUTTONS EVENT LISTENERS-->
+    // add event listener to btn2
+    var btn1 = document.getElementById('btn1');
+    btn2.addEventListener('click', remover);
+    var btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', remover);
+    var btn3 = document.getElementById('btn3');
+    btn2.addEventListener('click', remover);
+    var btn4 = document.getElementById('btn4');
+    btn2.addEventListener('click', remover);
+
+
 </script>
 </body>
 </html>
