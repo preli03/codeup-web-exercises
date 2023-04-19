@@ -267,12 +267,22 @@ state.size='300000'
 
 
 
+        JQUERY
 
+        JQUERY EVENTS
+        which event is doing the listening?
+        which event is it listening for...hover, click...?
+        what happens after the event?
+        which element is being affected
+        what about that element is being affected
+        to what is it being changed/manipulated to?
 
+        click on paragraph, alert that its been clicked
+        1paragraph:
+        2click method....
+        3write our function-->
 
-
-
-
-
-        ACCESSING-
+            $('p').click(function(){
+        alert('paragraph has been clicked');
+        }
 

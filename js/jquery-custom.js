@@ -1,43 +1,35 @@
 "use strict";
 
-$( "body" ).scrollTop( 300 );
+
 $(function () {
-    $('li').css('font-size', '20px')
-    const h1 = $('h1').html()
+    $('h1').click(() => {
+        $('h1').css('background-color', 'red')
+    })
 
-    $('h1').css('background-color', 'green')
+    $('p').dblclick(() => {
+        $('p').css('font-size', '18px')
+    })
 
+    $('li').hover(() => {
+        $('li').css('color', 'red')
+    }, () => {
+        $('li').css('color', 'black')
+
+    })
+    $('li').css('font-size', '18px')
+
+    $('h5').css('background-color', 'orange')
 
     $('h3').css('background-color', 'red')
 
-
     $('p').css('background-color', 'yellow')
 
-    alert(h1)
-/*
-    $('h1, p, li').css('background-color', 'yellow')
-*/
+    /*
+        $('h1, p, li').css('background-color', 'yellow')
+    */
+    $('#codeup').click(function () {
+        alert('h1 with id "codeup" was clicked');
 
-
-});
-
-
-
-var url = "https://code.jquery.com/color/jquery.color-2.1.2.js";
-$.getScript( url, function() {
-    $( "#go" ).click(function() {
-        $( ".block" )
-            .animate({
-                backgroundColor: "rgb(255, 180, 180)"
-            }, 1000 )
-            .delay( 500 )
-            .animate({
-                backgroundColor: "olive"
-            }, 1000 )
-            .delay( 500 )
-            .animate({
-                backgroundColor: "#00f"
-            }, 1000 );
     });
 
 });
