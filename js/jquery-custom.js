@@ -16,7 +16,6 @@ $(function () {
         $('li').css('color', 'black')
 
     })
-    $('li').css('font-size', '18px')
 
     $('h5').css('background-color', 'orange')
 
@@ -27,10 +26,8 @@ $(function () {
     /*
         $('h1, p, li').css('background-color', 'yellow')
     */
-    $('#codeup').click(function () {
-        alert('h1 with id "codeup" was clicked');
 
-    });
+
 
 });
 
