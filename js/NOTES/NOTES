@@ -248,6 +248,22 @@ state.size='300000'
             function getRandomInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min);
             }
+ ACCESSING-
+
+        //*JQUERY js selectors
+        <script src="jquery-.js"></script>
+        <div>
+        id selector
+        $('#object').html()
+        store this into something - var content = $('#hello').html()
+        console.log(content);
+
+        create a class - class selector <div class="color-block"></div>
+        target it using jquery object $('color-block').css('background-color', 'red')
+
+        //element selector
+        $('p').css(name: 'backgound-color', value: 'purple') -you can add other objects and elements to the string '#hello, p'
+        target everything - all selector $('*')
 
 
 
