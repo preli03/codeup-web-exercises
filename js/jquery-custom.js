@@ -9,6 +9,23 @@ $(function () {
 
 
 });
+var url = "https://code.jquery.com/color/jquery.color-2.1.2.js";
+$.getScript( url, function() {
+    $( "#go" ).click(function() {
+        $( ".block" )
+            .animate({
+                backgroundColor: "rgb(255, 180, 180)"
+            }, 1000 )
+            .delay( 500 )
+            .animate({
+                backgroundColor: "olive"
+            }, 1000 )
+            .delay( 500 )
+            .animate({
+                backgroundColor: "#00f"
+            }, 1000 );
+    });
+});
 
 
 /*$('.codeup').css('background-color', '#FF0');
