@@ -42,6 +42,40 @@
 </div>
 <p class="important">This is also very important.</p>
 </div>
+<style>
+    .block {
+        background-color: blue;
+        width: 150px;
+        height: 70px;
+        margin: 10px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+
+<button id="go">&raquo; Run</button>
+<div class="block"></div>
+
+<script>
+    var url = "https://code.jquery.com/color/jquery.color-2.1.2.js";
+    $.getScript( url, function() {
+        $( "#go" ).click(function() {
+            $( ".block" )
+                .animate({
+                    backgroundColor: "rgb(255, 180, 180)"
+                }, 1000 )
+                .delay( 500 )
+                .animate({
+                    backgroundColor: "olive"
+                }, 1000 )
+                .delay( 500 )
+                .animate({
+                    backgroundColor: "#00f"
+                }, 1000 );
+        });
+    });
+</script>
 
 
 
