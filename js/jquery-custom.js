@@ -1,3 +1,11 @@
-"use strict",
 
-    $('.p').css('font-size', '14px');
+    "use strict";
+
+$(function() {
+
+    // INSERT JAVASCRIPT CODE SAMPLE HERE
+    $('p').css('background-color', 'yellow');
+
+
+
+});
