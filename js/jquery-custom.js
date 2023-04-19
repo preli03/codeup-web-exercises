@@ -1,3 +1,6 @@
+"use strict";
+
+$( "body" ).scrollTop( 300 );
 $(function () {
     $('li').css('font-size', '20px')
     const h1 = $('h1').html()
@@ -9,6 +12,9 @@ $(function () {
 
 
 });
+
+
+
 var url = "https://code.jquery.com/color/jquery.color-2.1.2.js";
 $.getScript( url, function() {
     $( "#go" ).click(function() {
@@ -25,6 +31,7 @@ $.getScript( url, function() {
                 backgroundColor: "#00f"
             }, 1000 );
     });
+
 });
 
 
