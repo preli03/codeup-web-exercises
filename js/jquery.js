@@ -1,8 +1,8 @@
 "use strict";
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $("#my_audio").get(0).play();
-});
+});*/
 
 $(document).keyup(function(event){
     console.log(event.keyCode);
