@@ -17,7 +17,6 @@ $(function () {
 
     })
 
-    $('h5').css('background-color', 'orange')
 
     $('h3').css('background-color', 'red')
 

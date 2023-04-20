@@ -286,3 +286,18 @@ state.size='300000'
         alert('paragraph has been clicked');
         }
 
+        keyboard and mouse events-
+        keydown and keypress
+        create user input
+        2.keydown$('#keyboard-events').keydown(function(){
+        }
+        3.console.log('user typing');})
+        keydown,kepress,keyup,.on(), .off()
+        $('keyboard-events').on)'keydown',function(){
+        console.log($(;#keyoboard-events').text());
+        }
+        need time for the function to keyup....keeep in mind for JQUERY
+        $('keyboard-events').on('keydown',function(){
+                console.log($(;#keyoboard-events').val();
+
+
