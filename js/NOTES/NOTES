@@ -300,4 +300,37 @@ state.size='300000'
         $('keyboard-events').on('keydown',function(){
                 console.log($(;#keyoboard-events').val();
 
+        TRAVERSING THROUGH ELEMENTS TO MANIPULATE--->
+        .each() similar to forloop---this method mimics forloop
+        .each()
+        console.log($('li').first().html());
+        var firstP- $('p');
+        console.log(firstP);
 
+        console.log(paragraphs.first().html());
+        select children-->
+        $('ul').children());
+
+        alert the contents of the second paragraph...$('p')// [,p,p,p,p]
+        console.log($('p').first().next().next().html())
+        examples:
+        var listItems = $('li');
+        listItems.each(function(index){
+        alert($(this).html());
+        }
+       -- alert the contents of the list items I click on
+        $('li').each(function(index){
+        $(this).click(function(){
+        alert($(this).html())
+        }
+        }
+        $(this).css({
+        'background-color':'blue,
+        'color':'white'
+        }
+
+        $('li').each(function(index){
+        if index %of 2 !==0 {
+        $('this').css
+        }
+        }
