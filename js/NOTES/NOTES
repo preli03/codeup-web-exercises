@@ -421,6 +421,15 @@ state.size='300000'
 
         doSomething();
 
+        // $.ajax('https://dog.ceo/api/breeds/image/random').done(function(res){
+        //     console.log(res);
+        //
+        //     let dogImgSrc = res.message; // url
+        //     console.log(dogImgSrc);
+        //
+        //     $('#container').html(`<img src="${dogImgSrc}">`)
+        // })
+
 
 
 
