@@ -334,3 +334,26 @@ state.size='300000'
         $('this').css
         }
         }
+
+        AJAX
+        good to remember--
+        using jquery library ->$.ajax()
+        $.ajax()//helps us make a request by default
+
+        make the request
+        $.ajax(url, {
+        type: "GET"
+        }
+        do something with the response
+        .done(function)res_{
+        console.log(res);
+        }
+        we can also chain on fail, always, along with .done
+        .fail..take that error.....fai.(function(err){
+        alert('sorry request didnt happen')
+        }.always(function(){
+        alert('thanks for making a request')
+        }
+
+
+        ASYNCHRONOCITY
