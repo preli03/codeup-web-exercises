@@ -19,19 +19,59 @@
 <h1>My First Mapbox Map!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
+<!-- Load the `mapbox-gl-geocoder` plugin. -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
+
+<!--display navigation directions-->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css">
+
+
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoicHJlbGkwMyIsImEiOiJjbGd5MXNoMW4wMGphM2dzdTlyb2F5dmhkIn0.ZtkHZdMzPk8vvoJuLvfU5Q';
 
-
+//sarting map marker location
   const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v12', // style URL
     center: [-97.7430608,30.267153], // starting position [lng, lat] austin,tx
     zoom: 12, // starting zoom
-    doubleClickzoom: true
+    doubleClickzoom: true,
+    logoPosition:'top-left'
   });
+
+
+  //create a new marker--
+  const restaurant1 = new mapboxgl.Marker()
+  .setLngLat([-95.36, 29.76])
+  .addTo(map);
+//dallas
+  const restaurant2 = new mapboxgl.Marker()
+          .setLngLat([-96.79, 32.77])
+          .addTo(map);
+
+
+  // Add the control to the map.
+  map.addControl(
+          new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+          }))
+
+  map.addControl(
+          new MapboxDirections({
+            accessToken: mapboxgl.accessToken
+          }),
+          'bottom-left'
+  );
+
+
+  // 2821 Turtle Creek Blvd, Dallas, TX 75219 -- the mansion bar
+  // 1777 Walker St, Houston, TX 77010 -- biggios
 </script>
 
 
