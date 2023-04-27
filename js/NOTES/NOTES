@@ -417,7 +417,6 @@ state.size='300000'
         alert('goodbye!')
 
 
-
         doSomething();
 
         // $.ajax('https://dog.ceo/api/breeds/image/random').done(function(res){
