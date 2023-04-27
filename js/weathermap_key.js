@@ -1,0 +1,4 @@
+"use strict";
+const MAPBOX_KEY = 'pk.ASDQWE@#$';
+const OPEN_WEATHER_APPID = "2344ZXCERWETA";
+const LINKEDIN_KEY = "34234ASDAD45";
