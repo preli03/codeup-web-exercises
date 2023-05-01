@@ -20,16 +20,35 @@
 <div class="text-center fs-1 p-3 mb-2 bg-white text-dark bg- opacity-75">
     <h1>Open Weather Map Title</h1>
 </div>
+    <!--four cards of monday, tuesday, wednesday, thursday, friday, saturday, sunday-->
     <div class="map-container">
         <div id="temperature"></div>
-        <div class="current weather"></div>
         <div id="cloud-condition"></div>
-        <div id="location"></div>
+        <div id="feels_like"></div>
+        <div id="condition"></div>
+
+    </div>
+
+
+        <!--<div class="map-container2">
+            <div id="temperature2"></div>
+            <div class="current weather2"></div>
+            <div id="cloud-condition2"></div>
+            <div id="location2"></div>
+        </div>-->
+
+
+        <!--<section class=”weather”>
+            <div class=”container”>
+                <div class=”forecast”>
+                    // here we populate the 4 days forecast-->
+                </div>
+            </div>
 
 
 
     </div>
-</div>
+
 
 
 
@@ -42,38 +61,11 @@
 <script type="module" src="js/keys.js"></script>
 <script type="module" src="js/weathermap.js"></script>
 
-<script>
-    //create a function that converts kelvin
-   /* $.get("http://api.openweathermap.org/data/2.5/weather", {
-        APPID: OPEN_WEATHER_APPID,
-        q:     "San Antonio, US"
-    });
-    $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather",
-        type: "GET",
-        data: {
-            APPID: OPEN_WEATHER_APPID,
-            q:     "San Antonio, US"
-        }
-    });
-
-    $.ajax("http://api.openweathermap.org/data/2.5/weather", {
-        data: {
-            APPID: OPEN_WEATHER_APPID,
-            q: "San Antonio, US"
-        }
-    }).done(function(dataWeather){
-        console.log((dataWeather));
-    })*/
-
-
-
-</script>
 
 
 <div id='map2' style='margin-top: 300px; width: auto; height: 300px;'></div>
 
-<!--create a weathermap , with radar vector map overlay, with popup markers in capitols, add directions and make it easy to use-->
+
 
 </body>
 </html>
