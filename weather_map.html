@@ -7,34 +7,44 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/weathermap.css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 
 
-
-
-
 <body>
-<header>
 <div class="card-img-overlay align-items: center">
 <div class="text-center fs-1 p-3 mb-2 bg-white text-dark bg- opacity-75">
-    <h1>Open Weather Map Title</h1> </div>
+    <h1>Open Weather Map Title</h1>
 </div>
-</header>
+    <div class="map-container">
+        <div id="temperature"></div>
+        <div class="current weather"></div>
+        <div id="cloud-condition"></div>
+        <div id="location"></div>
+
+
+
+    </div>
+</div>
 
 
 
 
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
+<div id='map' style='margin-top: 300px; width: auto; height: 300px;'></div>
 
-
-
-
-<script> src="https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={651ac4cdc54bcc3b7e5297bbef1a0b2f}"</script>
-<script src="js/keys.js"></script>
+<script type="module" src="js/keys.js"></script>
+<script type="module" src="js/weathermap.js"></script>
 
 <script>
     //create a function that converts kelvin
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+   /* $.get("http://api.openweathermap.org/data/2.5/weather", {
         APPID: OPEN_WEATHER_APPID,
         q:     "San Antonio, US"
     });
@@ -54,11 +64,14 @@
         }
     }).done(function(dataWeather){
         console.log((dataWeather));
-    })
+    })*/
 
 
 
 </script>
+
+
+<div id='map2' style='margin-top: 300px; width: auto; height: 300px;'></div>
 
 <!--create a weathermap , with radar vector map overlay, with popup markers in capitols, add directions and make it easy to use-->
 
