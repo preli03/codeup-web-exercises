@@ -32,9 +32,10 @@ navigator.geolocation.getCurrentPosition(function
 $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${30.267153}&lon=${-97.7430608}&appid=${OPEN_WEATHER_KEY}&units=imperial`)
     .done(function(data){
 
-        $('#temperature').text('Current Weather in: '+ data.name + ' ' + data.main.temp + '\u00b0 F');
+        $('#temperature').text('Currently: '+ data.name + ' ' + data.main.temp + '\u00b0 F');
         $('#cloud-condition').text('Cloud Condition: '+ data.weather[0].description);
         $('#feels_like').text('Feels like: '+ data.name + ' ' + data.main.feels_like + '\u00b0 F');
+        $('#humidity').text('Low Humidity '+ ' ' + data.main.humidity + '%');
 
 
         console.log(data);
