@@ -5,3 +5,26 @@ map{
 .forecast-icon {
 
 }
+
+li {
+    list-style: none;
+    display: flex;
+justify-content: center
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder ;
+    font-family: Damascus;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: Damascus;
+}
+
+forecast-day{
+display: flex;
+    justify-content: center;
+}
