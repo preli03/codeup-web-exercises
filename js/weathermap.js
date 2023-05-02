@@ -39,7 +39,7 @@ map.on("click", function (e) {
             $('#temperature').text('Currently: ' + data.name + ' ' + data.main.temp + '\u00b0 F');
             $('#cloud-condition').text('Cloud Condition: ' + data.weather[0].description);
             $('#feels_like').text('Feels like: ' + data.name + ' ' + data.main.feels_like + '\u00b0 F');
-            $('#humidity').text('Low Humidity ' + ' ' + data.main.humidity + '%');
+            $('#humidity').text('Amazing ' + ' ' + data.main.humidity + '%');
 
             console.log(data);
         })

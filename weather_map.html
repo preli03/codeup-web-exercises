@@ -20,11 +20,19 @@
 
 
 <body>
-<div class="card-img-overlay align-items: center">
-<div class="text-center fs-1 p-3 mb-2 bg-white text-dark bg- opacity-75">
+
+
     <h1>Weather Watch</h1>
 </div>
-    <!--four cards of monday, tuesday, wednesday, thursday, friday, saturday, sunday-->
+    <!--five cards of monday, tuesday, wednesday, thursday, friday, saturday, sunday-->
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
+
+<div id='map' style='width: auto; height: 500px;'></div>
+<input type="text" id="search-input" placeholder="Search for a place">
+
     <ul class="map-container">
         <li id="temperature"></li>
         <li id="feels_like"></li>
@@ -33,51 +41,45 @@
 
 
 
-            <h2>5-Day Forecast</h2>
+        <h2>5-Day Forecast</h2>
 
-                <div id="forecast-day">
-                <p id="forecast-day-0"></p>
-                    <img id="forecast-icon-0" src="" alt="">
-                <p id="forecast-temp-0"></p>
-                </div>
+        <div id="forecast-day">
+            <p id="forecast-day-0"></p>
+            <img id="forecast-icon-0" src="" alt="">
+            <p id="forecast-temp-0"></p>
+        </div>
 
 
-            <div class="forecast-day">
-                <p id="forecast-day-1"></p>
-                <img id="forecast-icon-1" src="" alt="">
-                <p id="forecast-temp-1"></p>
-            </div>
-            <div class="forecast-day">
-                <p id="forecast-day-2"></p>
-                <img id="forecast-icon-2" src="" alt="">
-                <p id="forecast-temp-2"></p>
-            </div>
-            <div class="forecast-day">
-                <p id="forecast-day-3"></p>
-                <img id="forecast-icon-3" src="" alt="">
-                <p id="forecast-temp-3"></p>
-            </div>
-            <div class="forecast-day">
-                <p id="forecast-day-4"></p>
-                <img id="forecast-icon-4" src="" alt="">
-                <p id="forecast-temp-4"></p>
-            </div>
-        </ul>
-                </div>
+        <div class="forecast-day">
+            <p id="forecast-day-1"></p>
+            <img id="forecast-icon-1" src="" alt="">
+            <p id="forecast-temp-1"></p>
+        </div>
+        <div class="forecast-day">
+            <p id="forecast-day-2"></p>
+            <img id="forecast-icon-2" src="" alt="">
+            <p id="forecast-temp-2"></p>
+        </div>
+        <div class="forecast-day">
+            <p id="forecast-day-3"></p>
+            <img id="forecast-icon-3" src="" alt="">
+            <p id="forecast-temp-3"></p>
+        </div>
+        <div class="forecast-day">
+            <p id="forecast-day-4"></p>
+            <img id="forecast-icon-4" src="" alt="">
+            <p id="forecast-temp-4"></p>
+        </div>
+    </ul>
 </div>
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
-<div id='map' style='margin-top: 800px; width: auto; height: 300px;'></div>
+</div>
+
+
+
 
 
 <script type="module" src="js/keys.js"></script>
 <script type="module" src="js/weathermap.js"></script>
-
-
-
-<div id='map2' style='margin-top: 300px; width: auto; height: 300px;'></div>
-
-
 
 </body>
 </html>
