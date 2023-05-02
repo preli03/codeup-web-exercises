@@ -18,20 +18,19 @@ mapboxgl.accessToken = MAPBOX_KEY;
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-97.7430608, 30.267153], // starting position [lng, lat] austin,tx
         zoom: 12, // starting zoom for pin field selected
-
-/*
         doubleClickzoom: true,
-
-
-
-*/
     });
+let marker;
+// Add marker on click and remove previous marker
+map.on("click", function (e) {
+    if (marker) {
+        marker.remove();
+    }
 
 
 
 
 //FORECAST API CALL
-map.on('click', function(e) {
     const lat = e.lngLat.lat;
     const lon = e.lngLat.lng;
 

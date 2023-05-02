@@ -15,13 +15,13 @@ h1{
     display: flex;
     justify-content: center;
     font-weight: bolder ;
-    font-family: Damascus;
+    font-family: Damascus, serif;
 }
 h2{
     display: flex;
     justify-content: center;
     font-weight: bolder;
-    font-family: Damascus;
+    font-family: Damascus, serif;
 }
 
 forecast-day{
