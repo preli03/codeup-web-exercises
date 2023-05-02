@@ -13,6 +13,7 @@ mapboxgl.accessToken = MAPBOX_KEY;
     const lon = position.coords.longtitude;*/
 
 //starting map marker location
+
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
@@ -20,19 +21,18 @@ mapboxgl.accessToken = MAPBOX_KEY;
         zoom: 12, // starting zoom for pin field selected
         doubleClickzoom: true,
     });
+
 let marker;
 // Add marker on click and remove previous marker
 map.on("click", function (e) {
     if (marker) {
         marker.remove();
     }
-
-
-
-
 //FORECAST API CALL
+
     const lat = e.lngLat.lat;
     const lon = e.lngLat.lng;
+
 
     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_KEY}&units=imperial`)
         .done(function(data) {
@@ -40,6 +40,12 @@ map.on("click", function (e) {
             $('#cloud-condition').text('Cloud Condition: ' + data.weather[0].description);
             $('#feels_like').text('Feels like: ' + data.name + ' ' + data.main.feels_like + '\u00b0 F');
             $('#humidity').text('Amazing ' + ' ' + data.main.humidity + '%');
+            // add a popup to the marker with the current temperature
+            const marker = new mapboxgl.Marker({
+                draggable: true // make the marker draggable
+            })
+                .setLngLat([0, 0]) // set the initial marker position
+                .addTo(map); // add the marker to the map
 
             console.log(data);
         })
@@ -68,5 +74,6 @@ map.on("click", function (e) {
         .fail(function(jqXHR, testStatus, errorThrow) {
             console.error(errorThrow);
         });
+
 });
 

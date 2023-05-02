@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Open Weather Map</title>
@@ -21,29 +22,39 @@
 
 <body>
 
-
-    <h1>Weather Watch</h1>
-</div>
-    <!--five cards of monday, tuesday, wednesday, thursday, friday, saturday, sunday-->
+<header>
+    <h1>"WeatherStation"</h1>
+</header>
+<!--five cards of monday, tuesday, wednesday, thursday, friday, saturday, sunday-->
 
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
 
 <div id='map' style='width: auto; height: 500px;'></div>
+<form id="search-form">
+
 <input type="text" id="search-input" placeholder="Search for a place">
+    <button
+        type="button" class="btn btn-success">Success
+    </button>
+
+</form>
 
     <ul class="map-container">
         <li id="temperature"></li>
         <li id="feels_like"></li>
         <li id="cloud-condition"></li>
         <li id="humidity"></li>
+    </ul>
 
+<br>
+        <div>
+            <h2>5-Day Forecast</h2>
+        </div>
 
-
-        <h2>5-Day Forecast</h2>
-
-        <div id="forecast-day">
+<section>
+        <div class="forecast-day">
             <p id="forecast-day-0"></p>
             <img id="forecast-icon-0" src="" alt="">
             <p id="forecast-temp-0"></p>
@@ -70,12 +81,8 @@
             <img id="forecast-icon-4" src="" alt="">
             <p id="forecast-temp-4"></p>
         </div>
-    </ul>
-</div>
-</div>
 
-
-
+</section>
 
 
 <script type="module" src="js/keys.js"></script>
