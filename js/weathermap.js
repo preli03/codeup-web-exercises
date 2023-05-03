@@ -28,11 +28,12 @@ map.addControl(geocoder);
 
     /*
             draggable: true // make the marker draggable
+            vvv still doesnt drag marker
     */
 let marker = new mapboxgl.Marker({
     draggable: true // make the marker draggable
 
-})
+});
 
     // Add marker on click and remove previous marker
 map.on("click", function (e) {
