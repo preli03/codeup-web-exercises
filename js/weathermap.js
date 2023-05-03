@@ -50,7 +50,7 @@ map.on("click", function (e) {
             $('#temperature').text('Currently: ' + data.name + ' ' + data.main.temp + '\u00b0 F');
             $('#cloud-condition').text('Cloud Condition: ' + data.weather[0].description);
             $('#feels_like').text('Feels like: ' + data.name + ' ' + data.main.feels_like + '\u00b0 F');
-            $('#humidity').text('Amazing ' + ' ' + data.main.humidity + '%');
+            $('#humidity').text('Humid' + ' ' + data.main.humidity + '%');
 
             console.log(data);
         })
@@ -69,25 +69,13 @@ map.on("click", function (e) {
             for (let i = 0; i < 5; i++) {
                 const day = forecast[i];
                 const date = new Date(day.dt_txt);
-
                 $('#forecast-day-' + i).text(date.toLocaleDateString('en-US', {weekday: 'short'}));
                 $('#forecast-icon-' + i).attr('src', `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`);
                 $('#forecast-temp-' + i).text(Math.round(day.main.temp) + '\u00b0 F');
             }
         });
 
-    $('#search-form').on('submit', function (event) {
-        event.preventDefault();
-        const query = $('#search').val();
-        // Extract the latitude and longitude from the API response
-        const latitude = data.features[0].center;
-        const longitude = data.features[0].center[0];
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-    })
-            // add a popup to the marker with the current temperature
 
-            // Do something with the latitude and longitude, such as update the map
-            // or make another API request for weather data
 });
 
 
