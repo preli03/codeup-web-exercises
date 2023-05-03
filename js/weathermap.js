@@ -3,14 +3,15 @@
 
 //MAPBOX MAP--
 import { MAPBOX_KEY, OPEN_WEATHER_KEY } from './keys.js';
+$(document).ready(function() {
+    var audio = document.getElementById("background-audio");
+    audio.volume = 0.5; // Set volume to a low level
+    audio.play(); // Start playing the audio
+});
 
 
 
 mapboxgl.accessToken = MAPBOX_KEY;
-/*navigator.geolocation.getCurrentPosition(function
-    (position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longtitude;*/
 
 //starting map marker location
 
@@ -24,17 +25,10 @@ mapboxgl.accessToken = MAPBOX_KEY;
 var geocoder = new MapboxGeocoder({accessToken: MAPBOX_KEY,mapboxgl:mapboxgl});
 map.addControl(geocoder);
 
-
-
-    /*
-            draggable: true // make the marker draggable
-            vvv still doesnt drag marker
-    */
 let marker = new mapboxgl.Marker({
     draggable: true // make the marker draggable
 
 });
-
     // Add marker on click and remove previous marker
 map.on("click", function (e) {
         marker.remove();

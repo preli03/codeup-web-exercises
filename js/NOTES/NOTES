@@ -428,6 +428,29 @@ state.size='300000'
         //     $('#container').html(`<img src="${dogImgSrc}">`)
         // })
 
+<audio id="myAudio">
+  <source src="my-audio-file.mp3" type="audio/mp3">
+</audio>
+
+<audio id="background-audio" loop>
+  <source src="path/to/audio-file.mp3" type="audio/mpeg">
+</audio>
+
+<button id="playBtn">Play</button>
+<button id="pauseBtn">Pause</button>
+<audio id="myAudio">
+  <source src="my-audio-file.mp3" type="audio/mp3">
+</audio>
+
+
+$(document).ready(function() {
+  var audio = document.getElementById("background-audio");
+  audio.volume = 0.2; // Set volume to a low level
+  audio.play(); // Start playing the audio
+});
+
+<button id="playBtn">Play</button>
+<button id="pauseBtn">Pause</button>
 
 
 
