@@ -37,9 +37,9 @@ let marker = new mapboxgl.Marker({
 
     // Add marker on click and remove previous marker
 map.on("click", function (e) {
-    if (marker) {
         marker.remove();
-    }
+    marker.setLngLat(e.lngLat)
+        .addTo(map);
 //FORECAST API CALL
 
     const lat = e.lngLat.lat;
