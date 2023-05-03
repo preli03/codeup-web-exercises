@@ -21,9 +21,10 @@ mapboxgl.accessToken = MAPBOX_KEY;
         zoom: 12, // starting zoom for pin field selected
         doubleClickzoom: true,
     });
-
-var geocoder = new MapboxGeocoder({accessToken: MAPBOX_KEY});
+var geocoder = new MapboxGeocoder({accessToken: MAPBOX_KEY,mapboxgl:mapboxgl});
 map.addControl(geocoder);
+
+
 
     /*
             draggable: true // make the marker draggable
