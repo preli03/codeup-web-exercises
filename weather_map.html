@@ -29,17 +29,18 @@
 
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<!--search form-->
 
+
+<form id="search-form"></form>
+
+<br>
 
 <div id='map' style='width: auto; height: 500px;'></div>
-<form id="search-form">
 
-<input type="text" id="search-input" placeholder="Search for a place">
-    <button
-        type="button" class="btn btn-success">Success
-    </button>
+<br>
 
-</form>
+<div id='geocoder-container'></div>
 
     <ul class="map-container">
         <li id="temperature"></li>
@@ -83,6 +84,7 @@
         </div>
 
 </section>
+<br>
 
 
 <script type="module" src="js/keys.js"></script>

@@ -22,8 +22,18 @@ mapboxgl.accessToken = MAPBOX_KEY;
         doubleClickzoom: true,
     });
 
-let marker;
-// Add marker on click and remove previous marker
+var geocoder = new MapboxGeocoder({accessToken: MAPBOX_KEY});
+map.addControl(geocoder);
+
+    /*
+            draggable: true // make the marker draggable
+    */
+let marker = new mapboxgl.Marker({
+    draggable: true // make the marker draggable
+
+})
+
+    // Add marker on click and remove previous marker
 map.on("click", function (e) {
     if (marker) {
         marker.remove();
@@ -32,30 +42,23 @@ map.on("click", function (e) {
 
     const lat = e.lngLat.lat;
     const lon = e.lngLat.lng;
-
-
+//FORECAST API CALL
     $.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_KEY}&units=imperial`)
-        .done(function(data) {
+        .done(function (data) {
             $('#temperature').text('Currently: ' + data.name + ' ' + data.main.temp + '\u00b0 F');
             $('#cloud-condition').text('Cloud Condition: ' + data.weather[0].description);
             $('#feels_like').text('Feels like: ' + data.name + ' ' + data.main.feels_like + '\u00b0 F');
             $('#humidity').text('Amazing ' + ' ' + data.main.humidity + '%');
-            // add a popup to the marker with the current temperature
-            const marker = new mapboxgl.Marker({
-                draggable: true // make the marker draggable
-            })
-                .setLngLat([0, 0]) // set the initial marker position
-                .addTo(map); // add the marker to the map
 
             console.log(data);
         })
-        .fail(function(jqXHR, testStatus, errorThrow) {
+        .fail(function (jqXHR, testStatus, errorThrow) {
             console.error(errorThrow);
         });
 
     $.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_KEY}&units=imperial`)
-        .done(function(data) {
-            const forecast = data.list.filter(function(f) {
+        .done(function (data) {
+            const forecast = data.list.filter(function (f) {
                 // filter out forecasts that are not at noon
                 return f.dt_txt.includes('12:00:00');
             });
@@ -65,15 +68,25 @@ map.on("click", function (e) {
                 const day = forecast[i];
                 const date = new Date(day.dt_txt);
 
-                $('#forecast-day-' + i).text(date.toLocaleDateString('en-US', { weekday: 'short' }));
+                $('#forecast-day-' + i).text(date.toLocaleDateString('en-US', {weekday: 'short'}));
                 $('#forecast-icon-' + i).attr('src', `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`);
                 $('#forecast-temp-' + i).text(Math.round(day.main.temp) + '\u00b0 F');
-                console.log(data);
             }
-        })
-        .fail(function(jqXHR, testStatus, errorThrow) {
-            console.error(errorThrow);
         });
 
+    $('#search-form').on('submit', function (event) {
+        event.preventDefault();
+        const query = $('#search').val();
+        // Extract the latitude and longitude from the API response
+        const latitude = data.features[0].center;
+        const longitude = data.features[0].center[0];
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+    })
+            // add a popup to the marker with the current temperature
+
+            // Do something with the latitude and longitude, such as update the map
+            // or make another API request for weather data
 });
+
+
 
