@@ -5,7 +5,7 @@
 import { MAPBOX_KEY, OPEN_WEATHER_KEY } from './keys.js';
 $(document).ready(function() {
     var audio = document.getElementById("background-audio");
-    audio.volume = 0.5; // Set volume to a low level
+    audio.volume = 0.8; // Set volume to a low level
     audio.play(); // Start playing the audio
 });
 
