@@ -23,12 +23,12 @@ const users = [
     {
         name: 'zach',
         email: 'zach@codeup.com',
-        languages: ['javascript', 'bash','python']
+        languages: ['javascript', 'bash']
     },
     {
         name: 'ryan',
         email: 'ryan@codeup.com',
-        languages: ['clojure', 'javascript','ruby']
+        languages: ['clojure', 'javascript']
     },
     {
         name: 'luis',
@@ -47,7 +47,6 @@ const users = [
     }
 ];
 // Assume that the users array contains user objects with a `languages` array property
-const usersWithThreeLanguages = users.filter(function(user) {
-    return user.languages.length >= 3;
-    console.log(users)
-});
+const users = users.filter(user => user.languages.length >= 3);
+    console.log(users);
+
