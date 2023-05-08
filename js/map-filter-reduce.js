@@ -21,32 +21,41 @@ countWords('Mary had a little lamb little lamb little lamb');
 // next iteration
 const users = [
     {
+        id:1,
         name: 'zach',
         email: 'zach@codeup.com',
-        languages: ['javascript', 'bash']
+        languages: ['javascript', 'bash', 'python']
     },
     {
+        id:2,
         name: 'ryan',
         email: 'ryan@codeup.com',
-        languages: ['clojure', 'javascript']
+        languages: ['clojure', 'javascript', 'ruby']
     },
     {
+        id:3,
         name: 'luis',
         email: 'luis@codeup.com',
         languages: ['java', 'scala', 'php']
     },
     {
+        id:4,
         name: 'fernando',
         email: 'fernando@codeup.com',
         languages: ['java', 'php', 'sql']
     },
     {
+        id:5,
         name: 'justin',
         email: 'justin@codeup.com',
         languages: ['html', 'css', 'javascript', 'php']
     }
 ];
 // Assume that the users array contains user objects with a `languages` array property
-const users = users.filter(user => user.languages.length >= 3);
-    console.log(users);
+const usersArr = users.filter(user => user.languages.length >= 3);
+    console.log(usersArr);
+
+const initialValue = 0;
+const sumOfExperience;
+});
 
