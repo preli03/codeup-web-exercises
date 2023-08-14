@@ -12,8 +12,8 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
     var person = {
-        firstName: 'Theo',
-        lastName: 'Graham',
+        firstName: 'Patrick',
+        lastName: 'Mireles',
 
         sayHello: function () {
             return `Hello from ${this.firstName} ${this.lastName}`
@@ -47,6 +47,11 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+var iceCreamNames = [
+        {name: 'sherbert', amount: 30},
+        {name: 'cookiesandcream', amount: 20},
+        {name: 'strawberry', amount: 10}
+        ];
 
     var shoppers = [
         {name: 'Cameron', amount: 180},
